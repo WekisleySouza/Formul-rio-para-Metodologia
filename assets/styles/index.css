@@ -1,0 +1,279 @@
+:root {
+  --primary-color: #225c73;
+  --secondary-color: #5fc4e1;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --gap: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: ethnocentric;
+  src: url(../ethnocentric\ rg.otf);
+}
+
+html {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  background-color: var(--black-color);
+  background-image: url(../img/parabolic-pentagon.png);
+  background-size: 100%;
+  background-position: top;
+}
+
+.white-bg {
+  background-color: var(--white-color);
+}
+
+.menu {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 3px solid var(--primary-color);
+
+}
+
+.logo {
+  display: flex;
+}
+
+.logo-img img{
+  width: 60px;
+  margin: 20px 10px 13px 120px;
+}
+
+.logo h1 {
+  margin: auto;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: 'ethnocentric', sans-serif;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+nav {
+  width: 40%;
+  height: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin: auto;
+  margin-top: 35px;
+  font-size: 20px;
+}
+
+nav li a:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+#form{
+  width: 70%;
+  color: White;
+  margin: 0 auto;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.contact-form .form-grid {
+  border: none;
+  gap: var(--gap);
+}
+
+.form-group {
+  flex: 1 1 22rem;
+  margin-top: 30px;
+}
+
+.form-grid legend {
+  font-size: 30px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  background-color: var(--white-color);
+  padding: 5px 10px;
+  width: 100%;
+  font-size: 20px;
+  outline: none;
+  transition: all 300ms ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: 10px 10px var(--primary-color);
+}
+
+.form-group button {
+  background: none;
+  border: 2px solid var(--white-color);
+  color: var(--white-color);
+  padding: 5px 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+.form-group ::placeholder {
+  color: var(--primary-color);
+}
+
+.main-footer {
+  background-color: var(--black-color);
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: 'Roboto Mono', monospace;
+  border-top: 3px solid var(--primary-color);
+}
+
+.main-footer a {
+  color: var(--primary-color);
+  transition: all 100ms ease-in-out;
+}
+
+.main-footer a:hover {
+  color: var(--secondary-color);
+}
+
+.main-footer p {
+  margin: 0;
+  padding: 2rem;
+}
+
+.close-menu {
+  display: none;
+}
+
+.menu-secondary {
+  display: none;
+}
+
+@media (max-width: 960px) {
+
+  h1 {
+    color: var(--white-color);
+  }
+
+  .first {
+      bottom: 0;
+      text-align: center;
+  }
+
+  .menu, .menu ul {
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .menu li {
+    margin-left: 95%;
+  }
+
+  .menu {
+      height: 100vh;
+  }
+
+  .first {
+      display: none;
+  }
+
+  .close-menu-label::after {
+      content: '☰';
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      background-color: var(--black-color);
+      color: var(--primary-color);
+      font-size: 2rem;
+      line-height: 2rem;
+      width: 2.05rem;
+      height: 2.05rem;
+      text-align: center;
+      padding: 0.5rem;
+      cursor: pointer;
+  }
+
+  .close-menu:checked~.first {
+      display: block;
+  }
+
+  .close-menu:checked~.close-menu-label::after {
+      content: 'x';
+  }
+
+  .menu-secondary {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+      z-index: 1;
+      border-bottom: 0.1rem solid var(--primary-color);
+      background-color: var(--black-color);
+  }
+
+  .menu-secondary a {
+      color: var(--primary-color)
+  }
+
+  .logo {
+    display: block;
+    
+  }
+  
+  .logo-img img{
+    width: 60px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .form-group button {
+    padding: 2px 5px;
+    font-size: 17px;
+  }
+
+  body {
+    background-color: var(--black-color);
+    background-image: url(../img/parabolic-pentagon.png);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-position: top;
+    background-attachment: fixed;
+  }
+
+}
+
